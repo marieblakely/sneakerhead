@@ -8,7 +8,11 @@
 {% block content %}
 
 <div class="page-header">
+  {% if sneaker %}
+  <h1>Edit {{ sneaker.style }}</h1>
+  {% else %}
   <h1>Add a Sneaker</h1>
+  {% endif %}
   <img src="{% static 'images/white-black12.jpeg' %}" alt="White and black jordan 12 sneaker"/>
 </div>
 <form action="" method="post" class="form-container">
