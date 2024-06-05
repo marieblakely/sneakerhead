@@ -21,11 +21,15 @@ def sneaker_detail(request, sneaker_id):
 
 class Home(LoginView):
   template_name = 'home.html'
-  
+
 class SneakerCreate(CreateView):
   model = Sneaker
   fields = '__all__'
   success_url = '/sneakers/'
+
+  def form_valid(self, form):
+    form.instance.user = self.request.user  
+    return super().form_valid(form)
 
 class SneakerUpdate(UpdateView):
   model = Sneaker
