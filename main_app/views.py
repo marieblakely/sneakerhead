@@ -4,6 +4,7 @@ from .models import Sneaker
 from django.contrib.auth.views import LoginView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.decorators import login_required
 
 
 
@@ -13,10 +14,12 @@ from django.contrib.auth.forms import UserCreationForm
 def about(request):
   return render(request, 'about.html')
 
+@login_required
 def sneaker_index(request):
   sneakers = Sneaker.objects.all()
   return render(request, 'sneakers/index.html', { 'sneakers': sneakers })
 
+@login_required
 def sneaker_detail(request, sneaker_id):
   sneaker = Sneaker.objects.get(id=sneaker_id)
   return render(request, 'sneakers/detail.html', { 'sneaker': sneaker })
