@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}"/>
+{% endblock %}
+
+{% block content %}
+
+<section class="logo-container">
+  <div class="sneaker-container">
+    <img src="{% static 'images/off-white4.jpeg' %}" alt="The Sneakerhead Off White Jordan 4" />
+  </div>
+  <img 
+    src="{% static 'images/red-1.jpeg' %}" 
+    alt="Text reads: Sneakerhead"
+  />
+</section>
+
+{% endblock %}
