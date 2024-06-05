@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link 
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'css/sneakers/sneaker-index.css' %}"
+/>
+{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+  <h1>Sneaker List</h1>
+  <img src="{% static 'images/black-13.jpeg' %}" alt="A black jordan 13 sneaker" />
+  <img src="{% static 'images/cool-grey11.jpeg' %}" alt="A cool grey jordan 11 sneaker" />
+  <img src="{% static 'images/fresh-prince5.jpeg' %}" alt="A fresh prince jordan 5 sneaker" />
+  <img src="{% static 'images/green-1.jpeg' %}" alt="A green jordan 1 sneaker" />
+</section>
+
+<section class="card-container">
+  {% for sneaker in sneakers %}
+    <div class="card">
+      <div class="card-content">
+        <div class="card-img-container">
+          <img 
+            src="{% static 'images/lightning-4.png' %}" 
+            alt="A lightning jordan 4 sneaker"
+          >
+        </div>
+        <h2 class="card-title">{{ sneaker.style }}</h2>
+        <p>{{ sneaker.style }} {{ sneaker.number }}</p>
+        <p><small>{{ sneaker.description }}</small></p>
+      </div>
+    </div>
+  {% endfor %}
+</section>
+
+{% endblock %}

@@ -4,8 +4,8 @@ from django.http import HttpResponse
 
 class Sneaker:  
   def __init__(self, style, number, description):
-    self.name = style
-    self.breed = number
+    self.style = style
+    self.number = number
     self.description = description
   
 
@@ -22,3 +22,6 @@ def home(request):
 
 def about(request):
   return render(request, 'about.html')
+
+def sneaker_index(request):
+  return render(request, 'sneakers/index.html', { 'sneakers': sneakers })
