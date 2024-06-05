@@ -5,6 +5,7 @@ from django.contrib.auth.views import LoginView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 
@@ -27,7 +28,7 @@ def sneaker_detail(request, sneaker_id):
 class Home(LoginView):
   template_name = 'home.html'
 
-class SneakerCreate(CreateView):
+class SneakerCreate(LoginRequiredMixin, CreateView):
   model = Sneaker
   fields = '__all__'
   success_url = '/sneakers/'
@@ -36,11 +37,11 @@ class SneakerCreate(CreateView):
     form.instance.user = self.request.user  
     return super().form_valid(form)
 
-class SneakerUpdate(UpdateView):
+class SneakerUpdate(LoginRequiredMixin, UpdateView):
   model = Sneaker
   fields = ['style', 'number', 'description']
 
-class SneakerDelete(DeleteView):
+class SneakerDelete(LoginRequiredMixin, DeleteView):
   model = Sneaker
   success_url = '/sneakers/'  
 
