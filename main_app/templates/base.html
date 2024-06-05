@@ -30,14 +30,14 @@
     <nav>
       <ul>
         {% if user.is_authenticated %}
-          <li><a href="{% url 'sneaker-index' %}">All Sneakers</a></li>
-          <li><a href="{% url 'sneaker-create' %}">Add a Sneaker</a></li>
-          <li><a href="{% url 'about' %}">About</a></li>
-          <li><a href="{% url 'logout' %}">Log out</a></li>
+          <li><a href="{% url 'sneaker-index' %}">ALL SNEAKERS</a></li>
+          <li><a href="{% url 'sneaker-create' %}">ADD A SNEAKER</a></li>
+          <li><a href="{% url 'about' %}">ABOUT</a></li>
+          <li><a href="{% url 'logout' %}">LOG OUT</a></li>
         {% else %}
-          <li><a href="{% url 'about' %}">About</a></li>
-          <li><a href="{% url 'home' %}">Login</a></li>
-          <li><a href="{% url 'signup' %}">Sign Up</a></li>
+          <li><a href="{% url 'about' %}">ABOUT</a></li>
+          <li><a href="{% url 'home' %}">LOGIN</a></li>
+          <li><a href="{% url 'signup' %}">SIGN UP</a></li>
         {% endif %}
       </ul>
     </nav>
