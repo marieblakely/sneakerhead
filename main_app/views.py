@@ -24,3 +24,4 @@ def sneaker_detail(request, sneaker_id):
 class SneakerCreate(CreateView):
   model = Sneaker
   fields = '__all__'
+  success_url = '/sneakers/'

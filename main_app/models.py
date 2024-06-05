@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 class Sneaker(models.Model):
@@ -9,3 +10,6 @@ class Sneaker(models.Model):
 
   def __str__(self):
     return self.style
+  
+  def get_absolute_url(self):
+    return reverse('sneaker-detail', kwargs={'sneaker_id': self.id})
