@@ -15,3 +15,7 @@ def about(request):
 def sneaker_index(request):
   sneakers = Sneaker.objects.all()
   return render(request, 'sneakers/index.html', { 'sneakers': sneakers })
+
+def sneaker_detail(request, sneaker_id):
+  sneaker = Sneaker.objects.get(id=sneaker_id)
+  return render(request, 'sneakers/detail.html', { 'sneaker': sneaker })
