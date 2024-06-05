@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="page-header">
+  <h1>Remove sneaker from collection?</h1>
+  <img src="{% static 'images/white-red2.jpeg' %}" alt="White and red jordan 2 sneaker"/>
+</div>
+<h2>Are you sure you want to remove {{sneaker.style}}?</h2>
+
+<form action="" method="post" class="form">
+  {% csrf_token %}
+  <a 
+    href="{% url 'sneaker-detail' sneaker.id %}" 
+    class="btn secondary"
+  >
+    Cancel
+  </a>
+  <button type="submit" class="btn danger">Remove {{sneaker.style}}!</button>
+</form>
+
+{% endblock %}
