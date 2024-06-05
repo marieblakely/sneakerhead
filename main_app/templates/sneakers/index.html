@@ -22,6 +22,7 @@
 <section class="card-container">
   {% for sneaker in sneakers %}
     <div class="card">
+      <a href="/sneakers/{{ sneaker.id }}">
       <div class="card-content">
         <div class="card-img-container">
           <img 
@@ -33,6 +34,7 @@
         <p>{{ sneaker.style }} {{ sneaker.number }}</p>
         <p><small>{{ sneaker.description }}</small></p>
       </div>
+      </a>
     </div>
   {% endfor %}
 </section>
