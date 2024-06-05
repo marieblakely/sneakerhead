@@ -22,6 +22,10 @@
     <h1>{{ sneaker.style }}</h1>
       <h2>A {{ sneaker.style }} {{ sneaker.number }}</h2>
     <p>{{ sneaker.description }}</p>
+    <div class="sneaker-actions">
+      <a href="{% url 'sneaker-update' sneaker.id %}" class="btn warn">Edit</a>
+      <a href="{% url 'sneaker-delete' sneaker.id %}" class="btn danger">Delete</a>
+    </div>
   </div>
 </section>
 
