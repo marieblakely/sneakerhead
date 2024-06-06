@@ -30,6 +30,7 @@ Technologies Used:
 * Fly.io
 * Python
 * Django
+* Docker
 * Neon Console - Neon.tech
 
 
