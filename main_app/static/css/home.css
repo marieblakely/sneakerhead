@@ -25,6 +25,12 @@ main > section {
 
 .sneaker-container {
   width: 80%;
+  margin-bottom: 0px;
+}
+
+.sneakers {
+  display: flex;
+  
 }
 
 .login {

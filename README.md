@@ -33,8 +33,11 @@ Technologies Used:
 
 
 Attributes:
-* [Freeman Google Font](https://fonts.google.com/selection/embed)
+* [Concert One Google Font](https://fonts.google.com/selection/embed)
 * [Coolors.co](https://coolors.co/gradient/ebf4f5-b5c6e0)
+* [Sneakerhead Graffiti Art](https://pixlr.com/image-generator/)
+* [Cartoon Sneaker Images](https://google.com/cartoon-jordan-images/)
+
 
 
 

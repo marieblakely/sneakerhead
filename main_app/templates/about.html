@@ -1,8 +1,17 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link 
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'css/sneakers/about.css' %}"
+/>
+{% endblock %}
 
 {% block content %}
 
-<h1>About the Sneakerhead</h1>
+<h1>About Sneakerhead</h1>
 <hr />
 <p class="page-content">
   As a Sneakerhead, collecting and trading sneakers isn't just a hobby, it's a way of life! Collecting some of the rarest and most exclusive sneakers becomes a passion. Here at Sneakerhead, you can not only show off but keep track of your Jordan collection as you aquire, sell, and trade them. 
