@@ -1,6 +1,7 @@
 
 
-![app screenshot](src/assets/images/app.png)
+![app screenshot](main_app/static/images/app-screenshot.png)
+![app screenshot](main_app/static/images/app-screenshot2.png)
 
 # Sneakerhead
 
@@ -29,12 +30,11 @@ Technologies Used:
 * Fly.io
 * Python
 * Django
-
+* Neon Console - Neon.tech
 
 
 Attributes:
 * [Concert One Google Font](https://fonts.google.com/selection/embed)
-* [Coolors.co](https://coolors.co/gradient/ebf4f5-b5c6e0)
 * [Sneakerhead Graffiti Art](https://pixlr.com/image-generator/)
 * [Cartoon Sneaker Images](https://google.com/cartoon-jordan-images/)
 
