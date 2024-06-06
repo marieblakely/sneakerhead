@@ -1,7 +1,7 @@
 
 
-![app screenshot](main_app/static/images/app-screenshot.png)
-![app screenshot](main_app/static/images/app-screenshot2.png)
+![app screenshot](main_app/static/images/login.png)
+![app screenshot](main_app/static/images/index.png)
 
 # Sneakerhead
 
